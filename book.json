@@ -1,4 +1,13 @@
 {
+    
+    "title": "My gitbook test",
+    "description": "My gitbook test with plugins",
+    "gitbook": "3.2.3",
+    "root": ".",
+    "structure": {
+        "readme": "README.md"
+    },
+
     "plugins": ["gtm","back-to-top-button"],
     "pluginsConfig": {
           "gtm": {
