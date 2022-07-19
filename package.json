@@ -1,0 +1,7 @@
+{
+    "name": "gitbook",
+    "version": "0.0.1",
+    "dependencies": {
+        "gitbook-plugin-gtm": "^0.0.6"
+    }
+}
