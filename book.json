@@ -1,5 +1,5 @@
 {
-    "plugins": ["gtm"],
+    "plugins": ["gtm","back-to-top-button"],
     "pluginsConfig": {
           "gtm": {
             "token": "GTM-5R6V975",
