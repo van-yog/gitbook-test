@@ -2,6 +2,7 @@
     "name": "gitbook",
     "version": "0.0.1",
     "dependencies": {
+        "gitbook-plugin-analytics": "^0.2.1",
         "gitbook-plugin-gtm": "^0.0.6"
     }
 }

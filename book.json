@@ -1,8 +1,11 @@
 {
-    "plugins": ["gtm"],
+    "plugins": ["gtm", "analytics"],
     "pluginsConfig": {
         "gtm": {
             "token": "GTM-MTZL354"
+        },
+        "analytics": {
+            "google": "GTM-MTZL354"
         }
     }
 }
