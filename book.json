@@ -1,3 +1,8 @@
 {
-    "plugins": ["gtm"]
+    "plugins": ["gtm"],
+    "pluginsConfig": {
+        "gtm": {
+            "token": "GTM-MTZL354"
+        }
+    }
 }
