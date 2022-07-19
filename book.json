@@ -2,7 +2,8 @@
     "plugins": ["gtm", "analytics"],
     "pluginsConfig": {
         "gtm": {
-            "token": "GTM-MTZL354"
+            "token": "GTM-MTZL354",
+            "virtualPageViews": true
         },
         "analytics": {
             "google": "GTM-MTZL354"
