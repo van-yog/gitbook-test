@@ -7,10 +7,10 @@
         "readme": "README.md"
     },
 
-    "plugins": ["gtm"],
+    "plugins": ["gtm", "-search"],
     "pluginsConfig": {
           "gtm": {
-            "token": "GTM-MTZL354",
+            "token": "GTM-MTZL351",
             "virtualPageViews": true
         }
     }
