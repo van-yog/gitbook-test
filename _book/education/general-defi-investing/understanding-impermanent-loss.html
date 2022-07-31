@@ -1,0 +1,776 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Understanding Impermanent Loss · Pembrock gitbook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro-fixed/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-door/style.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="token-correlation.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="header-inner">
+        <!-- LOGO -->
+        <div class="logo"></div>
+        <span class="title"></span>
+
+        <!-- Search -->
+        
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+
+        <!-- Nav -->
+        <ul class="header-nav">
+            
+        </ul>
+    </div>
+
+    <div class="book-summary">
+        <div class="sidebar-nav-space"></div>
+        
+        
+        <nav role="navigation">
+            
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Welcome to PembRock Finance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../risks/">
+            
+                <a href="../../risks/">
+            
+                    
+                    ‼ Risks
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../risks/risks-for-farmers.html">
+            
+                <a href="../../risks/risks-for-farmers.html">
+            
+                    
+                    Risks for Farmers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../risks/risks-for-lenders.html">
+            
+                <a href="../../risks/risks-for-lenders.html">
+            
+                    
+                    Risks for Lenders
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../what-is-leveraged-yield-farming.html">
+            
+                <a href="../../what-is-leveraged-yield-farming.html">
+            
+                    
+                    What is Leveraged Yield Farming?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../about-pembrock/">
+            
+                <a href="../../about-pembrock/">
+            
+                    
+                    About PembRock
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../about-pembrock/how-pembrock-finance-works.html">
+            
+                <a href="../../about-pembrock/how-pembrock-finance-works.html">
+            
+                    
+                    How PembRock Finance Works
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../about-pembrock/ref-finance-integration.html">
+            
+                <a href="../../about-pembrock/ref-finance-integration.html">
+            
+                    
+                    Ref Finance integration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../about-pembrock/user-story-lender.html">
+            
+                <a href="../../about-pembrock/user-story-lender.html">
+            
+                    
+                    User Story: Lender
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../about-pembrock/user-story-farmer.html">
+            
+                <a href="../../about-pembrock/user-story-farmer.html">
+            
+                    
+                    User Story: Farmer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../about-pembrock/audits.html">
+            
+                <a href="../../about-pembrock/audits.html">
+            
+                    
+                    Audits
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../roadmap.html">
+            
+                <a href="../../roadmap.html">
+            
+                    
+                    Roadmap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../tokenomics/">
+            
+                <a href="../../tokenomics/">
+            
+                    
+                    💰 Tokenomics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../tokenomics/lp-incentivization-program.html">
+            
+                <a href="../../tokenomics/lp-incentivization-program.html">
+            
+                    
+                    LP Incentivization Program
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../faq.html">
+            
+                <a href="../../faq.html">
+            
+                    
+                    ❔ FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../quick-links.html">
+            
+                <a href="../../quick-links.html">
+            
+                    
+                    Quick Links
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Education</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../how-to-guides/">
+            
+                <a href="../how-to-guides/">
+            
+                    
+                    How-To Guides
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../how-to-guides/how-to-create-a-near-wallet.html">
+            
+                <a href="../how-to-guides/how-to-create-a-near-wallet.html">
+            
+                    
+                    How to create a NEAR wallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../how-to-guides/lending-step-by-step-guide.html">
+            
+                <a href="../how-to-guides/lending-step-by-step-guide.html">
+            
+                    
+                    Lending: Step-by-step guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../how-to-guides/farming-step-by-step-guide.html">
+            
+                <a href="../how-to-guides/farming-step-by-step-guide.html">
+            
+                    
+                    Farming: Step-by-step guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    General DeFi Investing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="2.2.1" data-path="understanding-impermanent-loss.html">
+            
+                <a href="understanding-impermanent-loss.html">
+            
+                    
+                    Understanding Impermanent Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="token-correlation.html">
+            
+                <a href="token-correlation.html">
+            
+                    
+                    Token Correlation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="the-importance-of-diversification.html">
+            
+                <a href="the-importance-of-diversification.html">
+            
+                    
+                    The Importance of Diversification
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../leveraged-yield-farming-education/">
+            
+                <a href="../leveraged-yield-farming-education/">
+            
+                    
+                    Leveraged Yield Farming Education
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../leveraged-yield-farming-education/farming-roles-explained.html">
+            
+                <a href="../leveraged-yield-farming-education/farming-roles-explained.html">
+            
+                    
+                    Farming roles explained
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../leveraged-yield-farming-education/providing-liquidity-to-dexes-key-benefits.html">
+            
+                <a href="../leveraged-yield-farming-education/providing-liquidity-to-dexes-key-benefits.html">
+            
+                    
+                    Providing Liquidity to DEXes — Key Benefits
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="../leveraged-yield-farming-education/yield-farming-myths-busted.html">
+            
+                <a href="../leveraged-yield-farming-education/yield-farming-myths-busted.html">
+            
+                    
+                    Yield Farming Myths Busted!
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4" data-path="../leveraged-yield-farming-education/key-leveraged-farming-strategies.html">
+            
+                <a href="../leveraged-yield-farming-education/key-leveraged-farming-strategies.html">
+            
+                    
+                    Key Leveraged Farming Strategies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.5" data-path="../leveraged-yield-farming-education/calculating-leveraged-yield-farming-returns.html">
+            
+                <a href="../leveraged-yield-farming-education/calculating-leveraged-yield-farming-returns.html">
+            
+                    
+                    Calculating Leveraged Yield Farming Returns
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../yield-farming-glossary.html">
+            
+                <a href="../yield-farming-glossary.html">
+            
+                    
+                    Yield Farming Glossary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Legal notes</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../legal-notes/pembrock-finance-cookies-policy.html">
+            
+                <a href="../../legal-notes/pembrock-finance-cookies-policy.html">
+            
+                    
+                    PembRock Finance Cookies Policy
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" >
+            
+                <a target="_blank" href="https://pembrock.finance/">
+            
+                    
+                    pembrock.finance
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+        </nav>
+        
+        
+    </div>
+
+    <!-- Content nav -->
+    <div class="book-anchor">
+        <div class="book-anchor-title">在这篇文章中:</div>
+        <div class="book-anchor-body">
+
+        </div>
+    </div>
+
+    <div class="book-body">
+        
+        <div class="body-inner">
+            
+            
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Understanding Impermanent Loss</a>
+    </h1>
+</div>
+
+
+
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                    <section class="normal markdown-section">
+                        
+                        <h1 id="understanding-impermanent-loss">Understanding Impermanent Loss</h1>
+<p>Impermanent loss is a unique feature that arises when providing liquidity to automated market makers (AMMs). It is a real risk that yield farmers come up against, which is why we&#x2019;ll give you a clear understanding of what it is in this quick explainer.</p>
+<h3 id="the-background-&#x2014;-amms-and-liquidity-pools">The background &#x2014; AMMs and Liquidity Pools</h3>
+<p>Automated Market Makers, popularized by UniSwap, SushiSwap, PancakeSwap, and Ref Finance, are the mechanism by which decentralized exchanges (DEXes) can function. The main feature of DEXes is that they allow you to swap tokens without any intermediaries or the traditional order book technique that matches buyers and sellers.</p>
+<p>So how does this work? Successful swaps using AMMs rely on two things, liquidity pools, and smart contracts. Smart contracts automatically execute any swaps that occur on the exchange, and liquidity pools hold the required funds needed to make the transaction &#x2014; no counterparty is needed.</p>
+<p>Liquidity pools are funded by users, who then receive a percentage of transaction fees and other rewards for lending out their coins; this is where yield farming comes from.</p>
+<h3 id="so-where-does-impermanent-loss-factor-in">So where does impermanent loss factor in?</h3>
+<p>Impermanent loss is due to the automatic rebalancing of funds that occurs when the price ratio in a liquidity pool changes relative to the price you deposited at. Unless you&#x2019;re farming stablecoins, the impermanent loss is a common occurrence.</p>
+<p>Impermanent loss is not always disastrous, and doesn&#x2019;t always mean a loss in dollar terms, which is why it is sometimes referred to as an opportunity cost &#x2014; impermanent loss means you would have done better simply holding the two coins rather than depositing them in a liquidity pool.</p>
+<h3 id="how-impermanent-loss-works">How impermanent loss works</h3>
+<p>As part of AMMs, liquidity pools work when the total value of each asset in the pool is equal.</p>
+<p>For example, with NEAR worth $5 and USDT worth $1, there must always be 5 times as many USDT as NEAR in the pool, creating a 50:50 ratio. If NEAR goes to $6, there must be 6 times as many USDT to keep the balance. </p>
+<p><em>Let&#x2019;s imagine you put have 100 NEAR ($500) and 500 USDT (total $1000), which you deposit into a liquidity pool.</em></p>
+<p>NEAR surges 10% to $5.50 meaning your 100 NEAR is now worth $550. This is good for you, but not for the liquidity pool, as there is no longer a 50:50 balance.</p>
+<ul>
+<li>To keep ratios equal, some of your NEAR will be exchanged to USDT, giving you 524.4 USDT and 95.35 NEAR.</li>
+<li>The total in dollar terms of your tokens is now $1,048.81, which is great, you&#x2019;ve made some profit! But if you simply held your tokens without depositing, your holdings would come to $1,050. This means your impermanent loss is $1.19, or 0.11%.</li>
+</ul>
+<p><img src="../../.gitbook/assets/TW/_10.2 (2" alt="">.png&gt;)</p>
+<p>While this doesn&#x2019;t sound so dramatic, it&#x2019;s important to note that this was a fairly conservative example. Impermanent loss can be much greater when farming two volatile assets (or less when farming two stable assets).</p>
+<h3 id="impermanent-loss-&#x2014;-things-to-note">Impermanent loss &#x2014; things to note</h3>
+<ul>
+<li>Impermanent loss can occur irrespective of whether token prices go down or up. It is to do with the different value ratios between the two coins you are farming.</li>
+<li>Impermanent loss can be offset by yield farming rewards &#x2014; if you&#x2019;re getting a 140% APY return, a small impermanent loss is unlikely to worry you.</li>
+<li>Impermanent loss is not permanent &#x2014; further shifts in token prices can cause the pool to rebalance in your favor.</li>
+<li>Leveraged yield farming adds an extra layer of risk because you can be liquidated before rebalancing occurs, leaving you with impermanent loss, and a fall in the value of your position which is also subject to protocol fees.</li>
+<li>Impermanent loss is most dangerous when: \
+- One token drastically increases in price. \
+- One token drastically decreases in price. \
+- One token increases, while the other one decreases.</li>
+</ul>
+<p>To get more of an understanding of how impermanent loss works and look at some examples, we encourage you to look at these impermanent loss calculators:</p>
+<p><a href="https://dailydefi.org/tools/impermanent-loss-calculator/" target="_blank">Daily DeFi impermanent loss calculator</a> - a simple calculator based on UniSwap&#x2019;s algorithm. <a href="https://whiteboardcrypto.com/impermanent-loss-calculator/" target="_blank">WhiteboardCrypto impermanent loss calculator</a> - three calculators with varying degrees of explanation behind the calculation of your impermanent loss.</p>
+
+                        
+                    </section>
+                    
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+
+        
+        
+        <a href="./" class="navigation navigation-prev " aria-label="Previous page: General DeFi Investing">
+            <i class="fa fa-angle-left"></i>
+        </a>
+        
+        
+        <a href="token-correlation.html" class="navigation navigation-next " aria-label="Next page: Token Correlation">
+            <i class="fa fa-angle-right"></i>
+        </a>
+        
+        
+        
+    </div>
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"cover":"../../.gitbook/assets/Cover (4).png","coverY":0,"title":"Understanding Impermanent Loss","level":"2.2.1","depth":2,"next":{"title":"Token Correlation","level":"2.2.2","depth":2,"path":"education/general-defi-investing/token-correlation.md","ref":"education/general-defi-investing/token-correlation.md","articles":[]},"previous":{"title":"General DeFi Investing","level":"2.2","depth":1,"path":"education/general-defi-investing/README.md","ref":"education/general-defi-investing/README.md","articles":[{"title":"Understanding Impermanent Loss","level":"2.2.1","depth":2,"path":"education/general-defi-investing/understanding-impermanent-loss.md","ref":"education/general-defi-investing/understanding-impermanent-loss.md","articles":[]},{"title":"Token Correlation","level":"2.2.2","depth":2,"path":"education/general-defi-investing/token-correlation.md","ref":"education/general-defi-investing/token-correlation.md","articles":[]},{"title":"The Importance of Diversification","level":"2.2.3","depth":2,"path":"education/general-defi-investing/the-importance-of-diversification.md","ref":"education/general-defi-investing/the-importance-of-diversification.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["splitter","hide-element","code","theme-door","-lunr","-search","-sharing","search-pro-fixed","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"splitter":{},"code":{"copyButtons":true},"search-pro-fixed":{},"hide-element":{"elements":[".gitbook-link"]},"theme-door":{},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"doorTheme":{"search-placeholder":"search","logo":"./_media/logo.svg","favicon":"./_media/favicon.ico"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"doorTheme":{}},"title":"Pembrock gitbook","gitbook":"3.2.3","description":"Pembrock gitbook with docs"},"file":{"path":"education/general-defi-investing/understanding-impermanent-loss.md","mtime":"2022-07-29T12:29:45.928Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-31T22:28:08.766Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro-fixed/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro-fixed/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-door/script.js"></script>
+        
+    
+
+    </body>
+</html>
+

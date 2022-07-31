@@ -1,0 +1,11 @@
+{
+    "name": "test",
+    "version": "0.2.2",
+    "description": "A test for adding gtm",
+    "engines": {
+      "gitbook": ">1.x.x"
+    },
+    "gitbook": {
+      "properties": {}
+    }
+  }

@@ -6,12 +6,30 @@
     "structure": {
         "readme": "README.md"
     },
+    
+        "plugins": [
+          "splitter",
+          "hide-element",
+          "code",
+          "theme-door",
+          "-lunr",
+          "-search",
+          "-sharing",
+          "search-pro-fixed"
+        ],
+        "variables": {
+          "doorTheme": {
 
-    "plugins": ["gtm", "fontsettings"],
-    "pluginsConfig": {
-          "gtm": {
-            "token": "GTM-MTZL351",
-            "virtualPageViews": true
+          }
+        },
+        "pluginsConfig": {
+          "hide-element": {
+            "elements": [".gitbook-link"]
+          },
+          "doorTheme": {
+            "search-placeholder": "search",
+            "logo": "./_media/logo.svg",
+            "favicon": "./_media/favicon.ico"
+          }
         }
-    }
 }
