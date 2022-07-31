@@ -7,7 +7,7 @@
         "readme": "README.md"
     },
 
-    "plugins": ["gtm", "-search"],
+    "plugins": ["gtm", "fontsettings"],
     "pluginsConfig": {
           "gtm": {
             "token": "GTM-MTZL351",

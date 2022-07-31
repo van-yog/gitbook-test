@@ -1,4 +1,4 @@
-# 🔥 Welcome to PembRock Finance
+# 🔥 Welcome to PembRock Finance!
 
 PembRock Finance is the first leveraged yield farming protocol built on the NEAR blockchain, providing:
 

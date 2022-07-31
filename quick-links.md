@@ -1,5 +1,5 @@
 ---
-cover: .gitbook/assets/PembRock Cover (2).png
+cover: .gitbook/assets/PembRock Cover.png
 coverY: 0
 ---
 
