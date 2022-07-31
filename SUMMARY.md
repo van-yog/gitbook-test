@@ -1,6 +1,6 @@
 # Table of contents
 
-* [🔥 Welcome to PembRock Finance](README.md)
+* [Welcome to PembRock Finance](README.md)
 * [‼ Risks](risks/README.md)
   * [Risks for Farmers](risks/risks-for-farmers.md)
   * [Risks for Lenders](risks/risks-for-lenders.md)
