@@ -1,17 +1,16 @@
 {
-    
-    "title": "My gitbook test",
-    "description": "My gitbook test with plugins",
+    "title": "Pembrock gitbook",
+    "description": "Pembrock gitbook with docs",
     "gitbook": "3.2.3",
     "root": ".",
     "structure": {
         "readme": "README.md"
     },
 
-    "plugins": ["gtm","back-to-top-button"],
+    "plugins": ["gtm"],
     "pluginsConfig": {
           "gtm": {
-            "token": "GTM-5R6V975",
+            "token": "GTM-MTZL354",
             "virtualPageViews": true
         }
     }
